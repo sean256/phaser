@@ -153,7 +153,7 @@ var ImageCollection = new Class({
      *
      * @return {Phaser.Tilemaps.ImageCollection} This ImageCollection object.
      */
-    addImage: function (gid, image)
+    addImage: function (gid, image, type, properties)
     {
         this.images.push({ gid, image, type, properties });
         this.total++;
