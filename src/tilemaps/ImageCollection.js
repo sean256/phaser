@@ -139,7 +139,7 @@ var ImageCollection = new Class({
      */
     containsImageIndex: function (imageIndex)
     {
-        return (imageIndex >= this.firstgid && imageIndex < (this.firstgid + this.total));
+        return (imageIndex >= this.firstgid && imageIndex < (this.firstgid + this.maxId + 1));
     },
 
     /**
@@ -155,7 +155,7 @@ var ImageCollection = new Class({
      */
     addImage: function (gid, image)
     {
-        this.images.push({ gid: gid, image: image });
+        this.images.push({ gid, image, type, properties });
         this.total++;
 
         return this;
